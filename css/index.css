@@ -468,7 +468,36 @@ footer >div >p{
 #overlay.active {
     display: block;
 }
+.scrollbar {
+  width: 40px;
+  height: 40px;
+  background-color: #000000cc;
+  position: fixed;
+  right:-50px;
+  bottom:10%;
+opacity: 0;
+  cursor: pointer;
+  z-index: 999999999;
+  transition: 0.5s;
+}
+.scroll-open{
+ right: 20px;
+  opacity: 1;
 
+}
+.scrollbar:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  padding: 7px;
+  border: solid white;
+  margin: -4px 13px;
+  transform: rotate(45deg);
+  border-width: 1px 0px 0px 1px;
+}
+.scrollbar:hover{
+  background-color:#377bfb;
+}
 @media (min-width:768px) and (max-width: 1024px){
     .pn-ist-nav>li{
         padding:0px 12px;
